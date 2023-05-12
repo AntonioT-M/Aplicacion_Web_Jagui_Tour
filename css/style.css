@@ -1,0 +1,18 @@
+#fondo {
+	background-image: url("../../images/Matris.png");
+	
+	background-attachment: fixed; 
+}
+
+#menu{
+	background-color: green;
+	border: 3px solid black;
+	font: solid black;
+}
+
+/*a{
+	font-size: 12px;
+}*/
+
+
+

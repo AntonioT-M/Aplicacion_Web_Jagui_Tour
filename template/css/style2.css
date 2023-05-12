@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css?family=Ruda&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+html{
+  width: 100%;
+  height: 100%;
+}
+
+.contenedor{
+  padding-top: 14%;
+  font-family: 'Ruda', sans-serif;
+}
+
+/* Animaciones */
+
+@keyframes cambioColores{
+  0% {color: #25e6a9;}
+  25% {color: #0adc99;}
+  50% {color:  #08f0a6;}
+  75% {color:  #03c386;}
+  100% {color: #25e6a9;}
+}
+
+@keyframes sombreadoAnimado{
+  from{
+      text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #d6d6d6,
+      0px 0px 150px #d6d6d6,
+      0px 10px 100px #d6d6d6,
+      0px 10px 100px #d6d6d6,
+      0px 10px 100px #d6d6d6,
+      0px 10px 100px #d6d6d6,
+      0px -10px 100px #d6d6d6,
+      0px -10px 100px #d6d6d6;
+    }
+}
+
+/*@-webkit-keyframes cambia_color {
+    0% {color: #fff; text-shadow: 1px 1px 1px #000; padding-right: 0em}
+    90% {color: #03f; text-shadow: 1px 1px 1px #fff; padding-right: 9em}
+
+}*/
+
+    /*-webkit-animation-name: cambia_color;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: ease-out;
+   -webkit-animation-duration: 5s;*/
+
+.headerPaquetes{
+	background-image:  url("noche.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 9.4%;
+  margin-left: 9.4%;
+  height: 10%;
+  padding-top: 0.7%;
+  padding-bottom: 1%;
+  padding-left: 0.7%;
+  padding-right: 0.7%;
+  position: fixed;  
+	opacity: 0.7;
+	left: 0;
+	right: 0;
+  font-family: 'Ruda', sans-serif;
+  z-index: 100;
+}
+.headerBusqueda{
+  background-image:  url("noche2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 9.4%;
+  margin-left: 9.4%;
+  height: 10%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: fixed;
+  top: 65;  
+  opacity: 0.7;
+  left: 0;
+  right: 0;
+  font-family: 'Ruda', sans-serif;
+  color: white;
+  z-index: 100;
+}
+content{
+  margin-top: 10px;
+}
+footer{
+	color: solid black;
+	background-color:  #0cdea5;
+	padding: 1.4%;
+}
+.bars{
+	cursor: pointer;
+}
+
+.arribaLogo{
+  position: static; top: -20; width: 100%; height: 100%;
+}
+
+.img-circle{
+  border-radius: 160px;
+}
+a.logo{
+	color:  #022874;
+  font-size: 22px;
+  color:  white;
+  float: left;
+  position: fixed;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+a.logo b{
+    font-weight: 900;
+}
+
+a.logo:hover, a.logo:focus{
+    text-decoration: none;
+    outline: none;
+    color: white;
+}
+
+a.logo span{
+    color:  #44b918;
+    font-size: 20px;
+}
+
+.tituloSg{
+  font-size: 35px;
+  position: fixed;
+  left: 480;
+  animation: cambioColores infinite;
+  animation-duration: 3s;
+}
+
+.barraAbajo{
+  background-color: #132675;
+  margin-right: 97%;
+  float: right;
+  position: relative;
+  left: 99.3%;
+  top: 89;
+}
+
+.barraAbajo:hover{
+  cursor: pointer;
+}
+
+.regresarP{
+  position: relative; left: 85%;
+}
+
+.paquetes img{
+  float: left;
+  border-radius: 12px;
+}
+
+.adquirir{
+  border: 1px solid blue;
+  background-color:  #d5f13c;
+  color: green;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  position: relative;
+  top: -60;
+  right: -25;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.noHayDatos{
+  font-size: 200%; font-family: "Lobster", cursive; margin-left: 10%; text-shadow: -10px 5px  #c4c4c4;
+}
+/* Crear viaje*/
+
+.imgDestinos{
+  height: 100%; 
+  width: 100%; 
+  size: cover; 
+  max-height: 450px; 
+  max-width: 1000px; 
+  display: block; 
+  margin: auto;
+}
+
+.tituloCrearViaje{
+  font-size: 7vmin;
+  color: black;
+  text-align: center;
+}
+
+.parteFormulario{
+   margin-top: 2%;
+}
+
+/* adquirirViaje */
+
+.nombreDestino{
+  font-size: 7vmin;
+  color: #fff;
+  text-align: center;
+  text-shadow:0px 0px 2px #fff,
+  0px 0px 4px #d6d6d6;
+  animation: sombreadoAnimado 1s ease-out;
+}
+
+.imagenDestino{
+  height: 100%; 
+  width: 100%; 
+  size: cover; 
+  max-height: 450px; 
+  max-width: 1000px; 
+  display: block; 
+  margin: auto;
+  border: 1px solid black; 
+}
+
+.parteUno{
+  margin-top: 2%;
+}
+
+.parteDos{
+  background-color: #4eb391;
+  margin-top: 2%;
+  border-radius: 0px 0px 79px 0px;
+  -moz-border-radius: 0px 0px 79px 0px;
+  -webkit-border-radius: 0px 0px 79px 0px;
+}
+
+.tituloss{
+  margin-top: 2%;
+  background-color: #ffffff; 
+  text-align: center; 
+  font-size: 100%; 
+  font-size-adjust: 0.50;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 20px 0px 0px 0px;
+  -moz-border-radius: 20px 0px 0px 0px;
+  -webkit-border-radius: 20px 0px 0px 0px;
+}
+
+.titulossPrecio{
+  margin-top: 2%;
+  background-color: #ffffff; 
+  text-align: center; 
+  font-size: 100%; 
+  font-size-adjust: 0.50;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.titulossCupo{
+  margin-top: 2%;
+  background-color: #ffffff; 
+  text-align: center; 
+  font-size: 100%; 
+  font-size-adjust: 0.50;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.titulossHotel{
+  margin-top: 2%;
+  background-color: #ffffff; 
+  text-align: center; 
+  font-size: 100%; 
+  font-size-adjust: 0.50;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 20px 0px 0px 0px;
+  -moz-border-radius: 20px 0px 0px 0px;
+  -webkit-border-radius: 20px 0px 0px 0px;
+}
+
+.textoInfo{
+  background-color: white;
+   color: #000000; 
+   text-align: center;
+   font-size: 100%; 
+   font-size-adjust: 0.50;
+   border-right: 1px solid black;
+   border-bottom: 1px solid black;
+   border-radius: 0px 0px 0px 53px;
+  -moz-border-radius: 0px 0px 0px 53px;
+  -webkit-border-radius: 0px 0px 0px 53px;
+/*  background-color:  #abf96d; 
+   border-radius: 35px 35px 35px 35px;
+  -moz-border-radius: 35px 35px 35px 35px;
+  -webkit-border-radius: 35px 35px 35px 35px;
+  border: 0px solid #000000;*/
+}
+
+.titulossFechas{
+  background-color: #ffffff;
+  margin-top: 2%; 
+  text-align: center; 
+  font-size: 100%; 
+  font-size-adjust: 0.50;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.fechaSalida{
+  background-color: #ffffff;
+  color: #000000; 
+  text-align: center; 
+  font-size: 100%; 
+  font-size-adjust: 0.50;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.fechaRegreso{
+  background-color: #ffffff;
+  text-align: center;
+  color: #000000;
+   font-size: 100%; 
+   font-size-adjust: 0.50;
+   border-bottom: 1px solid black;
+   border-right: 1px solid black;
+}
+
+.textoHotel{
+  background-color: #ffffff;
+  color: #000000; 
+  text-align: left; 
+  font-size: 100%; 
+  font-size-adjust: 0.50;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 0px 0px 156px 0px;
+  -moz-border-radius: 0px 0px 156px 0px;
+  -webkit-border-radius: 0px 0px 156px 0px;
+}
+
+.textoHotel h4{
+  text-align: center;
+}
+
+.titulosDos{ 
+  background-color: #9dff89;
+  color: #000000; 
+  text-align: center; 
+  font-size: 100%;
+  font-size-adjust: 0.50; 
+  border-left: 1px solid black;
+}
+
+.textosDos{
+  text-align: center; 
+  font-size: 100%; 
+}
+
+.titulosTres{
+  background-color:  #ffa589;
+  color: #000000;
+  text-align: center; 
+  font-size: 100%; 
+  font-size-adjust: 0.50;
+  border-right: 1px solid black;
+}
+
+.precioAdultos{
+  background-color: #ffffff;
+  color: #000000; 
+  font-size: 110%; 
+  font-size-adjust: 0.50%; 
+  text-align: center;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.precioAdultos span, .precioInfantes span{
+  color: green;
+  font-size: 150%;
+}
+
+.precioInfantes{
+  background-color: #ffffff;
+  color: #000000; 
+  font-size: 110%; 
+  font-size-adjust: 0.50%; 
+  text-align: center; 
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 0px 0px 13px 0px;
+  -moz-border-radius: 0px 0px 13px 0px;
+  -webkit-border-radius: 0px 0px 13px 0px;
+}
+
+.cantPersonas{
+  background-color: #ffffff;
+  color: #000000; 
+  font-size: 100%; 
+  font-size-adjust: 0.50%; 
+  text-align: center;
+  margin: auto;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.divImgHotel{
+  text-align: center; 
+  font-size: 100%; 
+  font-size-adjust: 0.50;
+}
+
+.imgHotel{
+  height: 100%; 
+  width: 100%; 
+  size: cover; 
+  max-height: 450px; 
+  max-width: 1000px; 
+  display: block; 
+  margin: auto;
+  border-radius: 30px 0px 0px 30px;
+  -moz-border-radius: 30px 0px 0px 30px;
+  -webkit-border-radius: 30px 0px 0px 30px;
+  border: 0px solid #000000;
+}
+
+.divBotones{
+  margin-top: 2%; margin-bottom: 4%; text-align: center; font-size: 100%; font-size-adjust: 0.50;
+}
+
+@media (max-width: 758px) {
+  a.logo{
+  color:  #022874;
+  font-size: 17px;
+  color:  white;
+  float: left;
+  left: 18;
+  margin-top: 22px;
+  text-transform: uppercase;
+}
+
+a.logo b{
+    font-weight: 900;
+}
+
+a.logo:hover, a.logo:focus{
+    text-decoration: none;
+    outline: none;
+    color: white;
+}
+
+a.logo span{
+    color:  #44b918;
+    font-size: 15px;
+}
+
+.contenedor{
+  padding-top: 30%;
+}
+
+.row{
+  width: auto;
+}
+.tituloSg{
+  font-size: 20px;
+  position: fixed;
+  left: 120;
+  top: 36;
+}
+.tituloSgD{
+  bottom: -30;
+}
+.barraAbajo{
+  margin-right: 93%;
+  float: right;
+  position: relative;
+  left: 240;
+  top: 305;
+}
+.headerPaquetes{
+  margin-right: 5.1%;
+  margin-left: 5.2%;
+}
+.headerBusqueda{
+  margin-right: 5.1%;
+  margin-left: 5.2%;
+  padding-bottom: 260px;
+}
+.regresarP{
+  position: relative; left: 50%; font-size: 75%;
+}
+.btnCrear{
+  margin-top: 2%; 
+}
+}
